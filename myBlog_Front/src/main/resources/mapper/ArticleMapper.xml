@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mynewblog.dao.ArticleDao">
+
+    <insert id="insertArticleMessage">
+        INSERT INTO article(user_id, title, category_id, tag, type, content, content_format)
+        VALUES(#{user_id}, #{title}, #{category_id}, #{tag}, #{type}, #{content}, #{content_format})
+    </insert>
+</mapper>

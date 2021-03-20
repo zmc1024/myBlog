@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mynewblog.dao.QueryDao">
+
+    <select id="Query" resultType="com.example.mynewblog.bean.Article">
+        SELECT * from article where publish = '1'
+    </select>
+
+    <select id="QueryByTimeDesc" resultType="com.example.mynewblog.bean.Article">
+        SELECT * from article where publish = '1' ORDER BY update_time DESC
+    </select>
+
+    <select id="QueryById" resultType="com.example.mynewblog.bean.Article">
+        SELECT * from article where id = #{id} and publish = '1'
+    </select>
+
+</mapper>
